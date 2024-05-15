@@ -64,8 +64,8 @@ export class Admin {
   ) {
     try {
       const users = await Auth.find({});
-      if (users.length < 0) {
-        return res.json({ msg: "N user Available" });
+      if (users.length <= 0) {
+        return res.json({ msg: "N0 user Available" });
       }
       res.json({ users });
     } catch (error) {
